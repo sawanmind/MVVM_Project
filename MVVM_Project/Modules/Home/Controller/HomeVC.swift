@@ -21,10 +21,6 @@ class HomeVC: UITableViewController {
         setupTableViewDataSource()
     }
 
-    
-    
-    
-    
     private func setupTableViewDataSource(){
      
         self.homeListViewModel =  HomeListViewModel(webservice: webservice) {
@@ -37,18 +33,6 @@ class HomeVC: UITableViewController {
         }
       
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 }
 

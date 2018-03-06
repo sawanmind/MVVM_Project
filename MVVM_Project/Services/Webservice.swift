@@ -9,8 +9,8 @@
 import Foundation
 
 
-class WebService {
-    func loadData(url:String,completion : @escaping ([HomeModel]) -> ()) {
+public class WebService {
+     func loadData(url:String,completion : @escaping ([HomeModel]) -> ()) {
         
         var sources = [HomeModel]()
         

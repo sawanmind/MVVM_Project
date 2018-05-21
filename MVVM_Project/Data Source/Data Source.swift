@@ -40,7 +40,6 @@ public class TableViewDataSource<Cell :UITableViewCell,ViewModel> : NSObject, UI
 
 
 
-
 public class CollectionViewDataSource<Cell:UICollectionViewCell, ViewModel> : NSObject , UICollectionViewDataSource {
     private var cellIdentifier :String!
     private var items :[ViewModel]!

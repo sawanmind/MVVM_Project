@@ -10,19 +10,20 @@ import Foundation
 import UIKit
 
 public class TableViewDataSource<Cell :UITableViewCell,ViewModel> : NSObject, UITableViewDataSource {
-  
     
     private var cellIdentifier :String!
     private var items :[ViewModel]!
     public var configureCell :(Cell,ViewModel) -> ()
-    
+   
     
     public init(cellIdentifier :String,tableView:UITableView ,items :[ViewModel], configureCell: @escaping (Cell,ViewModel) -> ()) {
         tableView.register(Cell.self, forCellReuseIdentifier: cellIdentifier)
         self.cellIdentifier = cellIdentifier
         self.items = items
         self.configureCell = configureCell
+
     }
+  
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count

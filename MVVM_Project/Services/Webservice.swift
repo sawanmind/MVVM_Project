@@ -24,7 +24,7 @@ public class WebService {
                 let dictionary = json as! [String:Any]
                 let sourcesDictionary = dictionary["sources"] as! [[String:Any]]
                 
-                sources = sourcesDictionary.flatMap(HomeModel.init)
+                sources = sourcesDictionary.compactMap(HomeModel.init)
                 
                 DispatchQueue.main.async {
                     completion(sources)
